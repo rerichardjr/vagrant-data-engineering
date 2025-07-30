@@ -3,10 +3,11 @@
 This repository provides a Vagrant-based setup for a scalable data lake architecture, enabling users to experiment with and deploy modern data storage, processing, and load-balancing solutions.  Options configurable by changing settings.yaml.
 
 ### Infrastructure Overview:
-- **Total Servers**: 5
+- **Total Servers**: 7
   - **Storage Nodes**: 2 MinIO servers configured as a storage cluster for high-performance object storage.
   - **Load Balancing Nodes**: 2 servers running NGINX and Keepalived for load balancing and high availability.
-  - **Compute Node**: 1 server equipped with Apache Spark, Delta Lake, Iceberg, and Hudi for advanced data processing and analysis.
+  - **Compute Node**: 2 servers (master and worker) equipped with Apache Spark, Delta Lake, Iceberg, and Hudi for advanced data processing and analysis.
+  - **Automation Node**: 1 server with Apache Airflow
 
 ## Prerequisites
 
@@ -19,7 +20,7 @@ This repository provides a Vagrant-based setup for a scalable data lake architec
 1. Clone the repository (see [Cloning the Repository](#cloning-the-repository)).
 2. Navigate to the repository directory:
    ```bash
-   cd vagrant-datalake
+   cd vagrant-data-engineering
    ```
 3. Start the Vagrant environment:
    ```bash
@@ -34,8 +35,8 @@ This repository provides a Vagrant-based setup for a scalable data lake architec
 To get the code from GitHub:
 
 ```bash
-git clone https://github.com/rerichardjr/vagrant-datalake.git
-cd vagrant-datalake
+git clone https://github.com/rerichardjr/vagrant-data-engineering.git
+cd vagrant-data-engineering
 ```
 
 - **Requirements**: Git must be installed.
